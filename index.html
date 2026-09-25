@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f2937">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Street Marker</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="status" class="panel">Tap <b>Start</b> to begin marking streets</div>
+
+  <div id="controls" class="panel">
+    <button id="btnTrack" class="primary">Start</button>
+    <button id="btnFollow" class="on" title="Keep map centered on you">Follow</button>
+    <button id="btnDraw" title="Tap the map to mark streets by hand">Draw</button>
+    <button id="btnMenu">⋯</button>
+  </div>
+
+  <div id="menu" class="panel hidden">
+    <button id="btnUndo">Undo last line</button>
+    <button id="btnExport">Export (GeoJSON)</button>
+    <label class="filebtn">Import<input id="fileImport" type="file" accept=".json,.geojson" hidden></label>
+    <button id="btnClear" class="danger">Clear everything</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

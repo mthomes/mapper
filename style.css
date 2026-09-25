@@ -1,0 +1,32 @@
+html, body { margin: 0; height: 100%; font-family: -apple-system, system-ui, sans-serif; }
+#map { position: fixed; inset: 0; }
+.panel {
+  position: fixed; z-index: 1000; background: rgba(31,41,55,.92); color: #fff;
+  border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,.3);
+}
+#status {
+  top: calc(env(safe-area-inset-top) + 10px); left: 10px; right: 10px;
+  padding: 10px 14px; font-size: 14px; text-align: center;
+}
+#controls {
+  bottom: calc(env(safe-area-inset-bottom) + 16px); left: 10px; right: 10px;
+  display: flex; gap: 8px; padding: 8px;
+}
+#menu {
+  bottom: calc(env(safe-area-inset-bottom) + 84px); right: 10px;
+  display: flex; flex-direction: column; gap: 6px; padding: 8px; width: 200px;
+}
+.hidden { display: none !important; }
+button, .filebtn {
+  flex: 1; font-size: 16px; padding: 14px 8px; border: 0; border-radius: 10px;
+  background: #374151; color: #fff; text-align: center; cursor: pointer;
+}
+button.on { background: #2563eb; }
+button.primary { background: #16a34a; font-weight: 600; flex: 1.5; }
+button.primary.recording { background: #dc2626; }
+button.danger { background: #7f1d1d; }
+#btnMenu { flex: .5; }
+.me-dot {
+  width: 16px; height: 16px; border-radius: 50%; background: #2563eb;
+  border: 3px solid #fff; box-shadow: 0 0 6px rgba(0,0,0,.5);
+}
